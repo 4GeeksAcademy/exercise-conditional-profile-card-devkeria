@@ -1,55 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .filters {
   background: white;
   width: 100%;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
+
 .filters li {
   display: inline-block;
   max-width: 80px;
   padding: 3px;
 }
+
 .filters li label {
   display: block;
   font-size: 12px;
   font-weight: 900;
 }
-.filters li input {
-  width: 100%;
-}
+
+.filters li input,
 .filters li select {
   width: 100%;
 }
-.widget {
-  position: relative;
+
+.profile-card {
   width: 300px;
-  height: 350px;
-  margin: 50px auto;
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
-.widget .cover {
+
+.cover {
   height: 160px;
   overflow: hidden;
 }
-.widget .cover img {
+
+.cover img {
   width: 100%;
   height: auto;
   min-height: 160px;
   border-radius: 4px 4px 0 0;
 }
-.widget .photo {
+
+.widget {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+
+.photo {
   position: absolute;
   top: 85px;
   left: 50%;
   width: 100px;
   height: 100px;
-  margin: 0 0 0 -55px;
+  margin: 0 0 0 -50px;
   border: 5px solid #fff;
   border-radius: 50%;
 }
-.widget h1,
-.widget h2,
-.widget h3 {
+
+h1, h2, h3 {
   display: block;
   margin: 10px 0;
   text-align: center;
@@ -58,30 +80,37 @@
   font-weight: 300;
   color: #999;
 }
-.widget h1 {
+
+h1 {
   margin: 60px 0 20px;
   font-size: 26px;
   color: #000;
 }
-.widget h3 {
+
+h3 {
   font-size: 12px;
 }
-.widget ul {
+
+ul {
   position: absolute;
   top: 20px;
   padding: 0;
   background: #2cdfd3;
 }
-.widget ul.position-left {
+
+ul.position-left {
   left: -26px;
 }
-.widget ul.position-right {
+
+ul.position-right {
   right: -27px;
 }
-.widget ul li {
+
+ul li {
   list-style: none;
 }
-.widget ul li a {
+
+ul li a {
   display: block;
   padding: 5px 6px;
   color: #fff;
@@ -90,13 +119,39 @@
   border-bottom: 1px solid #2cd5ca;
   transition: background-color 0.3s;
 }
-.widget ul li:hover > a {
+
+ul li:hover > a {
   background-color: #2cd5ca;
 }
-.widget ul li:first-child > a {
+
+ul li:first-child > a {
   border-radius: 0 3px 0 0;
 }
-.widget ul li:last-child > a {
+
+ul li:last-child > a {
   border: none;
   border-radius: 0 0 3px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .widget {
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .photo {
+    width: 80px;
+    height: 80px;
+    margin: 0 0 0 -40px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2, h3 {
+    font-size: 14px;
+  }
 }

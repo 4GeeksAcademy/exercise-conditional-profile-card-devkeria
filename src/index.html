@@ -1,33 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Profile Card Generator</title>
     <link rel="shortcut icon" href="./assets/img/4geeks.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link to your CSS file -->
     <script
       src="https://kit.fontawesome.com/072e5df971.js"
       crossorigin="anonymous"
     ></script>
   </head>
-
   <body>
     <ul class="filters">
       <li>
         <label>Include Cover</label>
         <select class="picker" for="includeCover">
-          <option value="">Include Cover</option>
           <option value="true">True</option>
           <option value="false">False</option>
         </select>
       </li>
       <li>
         <label>Name</label>
-        <input class="picker" for="name" type="Keria" />
+        <input class="picker" for="name" type="text" />
       </li>
       <li>
         <label>Last Name</label>
-        <input class="picker" for="lastName" type="Wiley" />
+        <input class="picker" for="lastName" type="text" />
       </li>
       <li>
         <label>S.M. Position</label>
@@ -39,7 +39,6 @@
       <li>
         <label>Twitter</label>
         <input class="picker" for="twitter" type="text" />
-        <a href="#" class="twitter"><img src="#"/></a>
       </li>
       <li>
         <label>Github</label>
@@ -59,7 +58,7 @@
           <option value="">null</option>
           <option value="Web Developer">Web Developer</option>
           <option value="Floor Planner">Floor Planner</option>
-          <option value="Technical Writter">Technical Writter</option>
+          <option value="Technical Writer">Technical Writer</option>
         </select>
       </li>
       <li>
@@ -83,9 +82,12 @@
         </select>
       </li>
     </ul>
-    <div id="widget_content"></div>
 
-    <!-- do not remove this bundle.js tag -->
-    <script type="text/javascript" src="/main.bundle.js"></script>
+    <div id="profile-card" class="profile-card">
+      <!-- Profile card content will be dynamically inserted here -->
+    </div>
+
+    <!-- Link to your JavaScript file -->
+    <script type="module" src="app.js"></script>
   </body>
 </html>
